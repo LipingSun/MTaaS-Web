@@ -1,0 +1,64 @@
+<div class="left-sidebar">
+    <div class="sidebar-holder">
+        <ul class="nav nav-list" ng-init="sidebar = 'dashboard'; resourcesTab = -1; billingTab=-1;">
+
+            <!-- sidebar to mini Sidebar toggle -->
+            <li class="nav-toggle">
+                <button class="btn  btn-nav-toggle text-primary">
+                    <i class="fa fa-angle-double-left toggle-left"></i>
+                </button>
+            </li>
+
+            <!-- Dashboard Tab -->
+            <li ng-class="{ active: sidebar === 'dashboard' }">
+                <a href="#/dashboard" ng-click="sidebar = 'dashboard'" data-original-title="Dashboard"><i class="fa fa-dashboard"></i>Dashboard</a>
+            </li>
+
+            <!-- Wizard
+            <li ng-class="{ active: sidebar === 'wizard' }">
+                <a href="#/wizard" ng-click="sidebar = 'wizard'" data-original-title="Wizard"><i class="fa fa-dashboard"></i>Wizard</a>
+            </li> -->
+
+
+            <!-- Resources Tab -->
+            <li class="submenu">
+                <a href ng-click="resourcesTab = -resourcesTab" data-original-title="Resources"><i class="fa fa-tint"></i>Resources</span></a>
+                <ul style="display: block;" ng-show="resourcesTab > 0">
+                    <li ng-class="{ active: sidebar === 'emulator' }">
+                        <a href="#/emulator" ng-click="sidebar = 'emulator'" data-original-title="Emulator"><i class="fa fa-mobile"></i><span>Emulator</span></a>
+                    </li>
+                    <li ng-class="{ active: sidebar === 'hub' }">
+                        <a href="#/hub" ng-click="sidebar = 'hub'" data-original-title="Hub"><i class="fa fa-mobile"></i><span>Hub</span></a>
+                    </li>
+                    <!--<li ng-class="{ active: sidebar === 'device' }" ng-disabled="true">
+                        <a href="#/device" ng-click="sidebar = 'device'" data-original-title="Device"><i class="fa fa-mobile"></i><span>Device</span></a>
+                    </li>-->
+                    <!--<li ng-class="{ active: sidebar === 'VM' }">-->
+                        <!--<a href="#/VM" ng-click="sidebar = 'VM'" data-original-title="VM"><i class="fa fa-mobile"></i><span>VM</span></a>-->
+                    <!--</li>-->
+                </ul>
+            </li>
+
+            <!-- Billing Tab -->
+            <li class="submenu">
+                <a href ng-click="billingTab=-billingTab" data-original-title="Billing"><i class="fa fa-credit-card"></i>Billing</a>
+                <ul style="display: block;" ng-show="billingTab>0">
+                    <li ng-class="{ active: sidebar === 'Bills' }">
+                        <a href="#/bills" ng-click="sidebar = 'Bills'" data-original-title="Bills"><i class="fa fa-credit-card"></i><span> Bills </span></a>
+                    </li>
+
+
+                    <li ng-class="{ active: sidebar === 'Payment' }">
+                        <a href="#/payment" ng-click="sidebar = 'Payment'" data-original-title="Payment"><i class="fa fa-credit-card"></i><span> Payments </span></a>
+                    </li>
+                    <li ng-class="{ active: sidebar === 'History' }">
+                        <a href="#/billing_setting" ng-click="sidebar = 'History'" data-original-title="History"><i class="fa fa-credit-card"></i><span> Settings </span></a>
+                    </li>
+                </ul>
+            </li>
+            <!--  <li ng-class="{ active: sidebar === 'Billing' }">
+                  <a href="#/billing" ng-click="sidebar = 'Billing'" data-original-title="Billing"><i class="fa fa-credit-card"></i><span> Billing </span></a>
+              </li>-->
+        </ul>
+    </div>
+</div>
